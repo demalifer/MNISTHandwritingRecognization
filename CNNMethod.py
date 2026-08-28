@@ -65,7 +65,7 @@ def evaluate(test_loader, model, device):
             _, predicted = torch.max(outputs, 1)
             total += labels.size(0)
             correct += (predicted == labels).sum().item()
-    print(f'CNN Accuracy: {100 * correct / total}')
+    print(f'CNN Accuracy: {correct / total}')
 
 if __name__ == '__main__':
     train_loader, test_loader = data_loader()
